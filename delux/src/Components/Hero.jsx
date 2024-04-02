@@ -5,7 +5,7 @@ export default function Hero() {
         <div className="hero">
             <div className="hero-text">
                 <h1>Time with Perfection</h1>
-                <HashLink to={"#my-store-101321525"} class="button" >Shop Now</HashLink>
+                <HashLink to={"#my-store-101321525"} className="button" >Shop Now</HashLink>
             </div>
         </div>
     );

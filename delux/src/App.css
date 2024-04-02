@@ -1,5 +1,5 @@
 * {
-  font-family: "Libre Baskerville", serif;;
+  font-family: "Libre Baskerville", serif;
 
   padding: 0;
   margin: 0;
@@ -8,7 +8,7 @@
 }
 
 header {
-  margin: 3rem;
+  width: 100%;
 
   position: absolute;
   z-index: 100;
@@ -19,6 +19,8 @@ nav ul {
   gap: 3rem;
 
   list-style: none;
+
+  margin: 3rem;
 }
 
 .hero {
@@ -32,7 +34,7 @@ nav ul {
   justify-content: baseline;
   position: relative;
 
-  height: 130vh;
+  height: 120vh;
   margin-bottom: 5rem;
   isolation: isolate;
 }
@@ -40,15 +42,16 @@ nav ul {
 .hero-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
+  width: 100%;
   gap: 2rem;
+
+  margin-left: 5rem;
 }
 
 .hero-text h1 {
   font-size: 3rem;
-
-  margin-left: 5rem;
 
   z-index: 1000;
 }
@@ -78,7 +81,7 @@ nav ul {
 .hero::after {
   content: '';
   background-color: rgba(30, 30, 30, .7);
-  height: 130vh;
+  height: 120vh;
   position: absolute;
   z-index: -1;
   inset: 0;
@@ -96,4 +99,49 @@ a {
 
 a:hover {
   color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    background-position: 75%;
+  }
+}
+
+@media (max-width: 500px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .hero {
+  background-position: 100%;
+    justify-content: center;
+  }
+
+  .hero-text {
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .hero-text .button {
+    font-size: 1.35rem;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .hero::after {
+    height: 70vh;
+  }
 }
